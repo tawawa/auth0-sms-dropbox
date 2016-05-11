@@ -58,6 +58,7 @@
         var code = $('#code').val();
         //submit the passcode to authenticate the phone
         auth0.verifySMSCode({state: '${state}', phoneNumber: phoneNumber, code: code}, function (err) {
+            // this only gets called if there was an error
             if (err) {
                 console.error("Error occurred: " + err.error_description);
                 return;

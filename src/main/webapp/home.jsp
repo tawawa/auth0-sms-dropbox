@@ -84,7 +84,7 @@
                 scope: 'openid name email picture',
                 state: '${state}'
             }, function (err) {
-                // this only gets called if there was a login error
+                // this only gets called if there was an error
                 console.error('Error logging in: ' + err);
             });
         });
